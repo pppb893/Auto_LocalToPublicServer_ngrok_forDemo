@@ -1,0 +1,227 @@
+.ngrok-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.ngrok-modal {
+    background: linear-gradient(135deg, rgba(30, 27, 75, 0.95), rgba(20, 20, 40, 0.95));
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.ngrok-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ngrok-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.ngrok-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    background: linear-gradient(135deg, #a78bfa, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ngrok-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+}
+
+.ngrok-input-group {
+    margin-bottom: 20px;
+}
+
+.ngrok-input {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Monaco', 'Consolas', monospace;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.ngrok-input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.2);
+}
+
+.ngrok-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.ngrok-instructions {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.instructions-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #60a5fa;
+    margin: 0 0 12px 0;
+}
+
+.instructions-steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.instructions-steps li {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    padding-left: 24px;
+    position: relative;
+}
+
+.instructions-steps li::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 0;
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.instructions-steps a {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+.instructions-steps a:hover {
+    text-decoration: underline;
+}
+
+.ngrok-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.ngrok-btn {
+    flex: 1;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.ngrok-btn.primary {
+    background: linear-gradient(135deg, #a78bfa, #818cf8);
+    color: #fff;
+}
+
+.ngrok-btn.primary:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(167, 139, 250, 0.4);
+}
+
+.ngrok-btn.primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ngrok-btn.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ngrok-btn.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ngrok-spinner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 10;
+}
+
+.ngrok-spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(167, 139, 250, 0.2);
+    border-top-color: #a78bfa;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin-bottom: 16px;
+}
+
+.ngrok-spinner-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ngrok-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    color: #f87171;
+    font-size: 0.9rem;
+}
+
+.ngrok-success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    color: #4ade80;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.modal-relative {
+    position: relative;
+}
